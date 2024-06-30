@@ -15,3 +15,21 @@ for (let key of keys) {
         display_input.innerHTML = CleanInput(input);
       } else if (value == "=") {
         let result = eval(PrepareInput(input));
+
+        display_output.innerHTML = CleanOutput(result);
+    } else if (value == "brackets") {
+      if (
+        input.indexOf("(") == -1 ||
+        (input.indexOf("(") != -1 &&
+          input.indexOf(")") != -1 &&
+          input.lastIndexOf("(") < input.lastIndexOf(")"))
+      ) {
+        input += "(";
+      } else if (
+        (input.indexOf("(") != -1 && input.indexOf(")") == -1) ||
+        (input.indexOf("(") != -1 &&
+          input.indexOf(")") != -1 &&
+          input.lastIndexOf("(") > input.lastIndexOf(")"))
+      ) {
+        input += ")";
+      }
