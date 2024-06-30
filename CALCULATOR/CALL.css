@@ -33,3 +33,34 @@
   text-align: right;
   flex: 1 1 0%;
 }
+
+.display .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.display .input {
+  width: 100%;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.display .output {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.display .operator {
+  color: #eb6666;
+}
+
+.display .brackets,
+.display .percent {
+  color: #26fed7;
+}
